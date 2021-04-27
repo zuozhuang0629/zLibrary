@@ -1,0 +1,207 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.jakewharton.butterknife'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+
+repositories {
+    mavenLocal()
+}
+android {
+
+    signingConfigs {
+        debug {
+            keyAlias 'kfly123'
+            keyPassword 'kfly123'
+            storeFile file('C:\\Users\\Administrator\\Desktop\\jks\\kfly.jks')
+            storePassword 'kfly123'
+        }
+        release {
+            keyAlias 'kfly123'
+            keyPassword 'kfly123'
+            storeFile file('C:\\Users\\Administrator\\Desktop\\jks\\kfly.jks')
+            storePassword 'kfly123'
+        }
+    }
+
+    compileSdkVersion compile_sdk_version.toInteger()
+    defaultConfig {
+
+        applicationId "com.wxzt.kfly"
+        minSdkVersion min_sdk_version.toInteger()
+        targetSdkVersion target_sdk_version.toInteger()
+        multiDexEnabled true
+        vectorDrawables.useSupportLibrary = true
+        ndk {
+            abiFilters 'armeabi-v7a'
+        }
+        versionCode 20000
+        versionName "2.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName(), AROUTER_GENERATE_DOC: "enable"]
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            //使用 BuildConfig.isDebug isDebug true 开启debug检测，false关闭
+            buildConfigField "boolean", "isDebug", "false"
+            //isFlag 1 表示真实环境  2 测试环境
+            buildConfigField "int", "isFlag", "1"
+            //zipalign优化
+            zipAlignEnabled true
+            // 移除无用的resource文件
+//            shrinkResources true
+            //混淆处理
+            minifyEnabled false
+            //混淆配置
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+
+        }
+
+        release {
+            //使用 BuildConfig.isDebug isDebug true 开启debug检测，false关闭
+            buildConfigField "boolean", "isDebug", "false"
+            //isFlag 1 表示真实环境  2 测试环境
+            buildConfigField "int", "isFlag", "1"
+            //zipalign优化
+            zipAlignEnabled true
+            // 移除无用的resource文件
+//            shrinkResources true
+            //混淆处理
+            minifyEnabled false
+            //混淆配置
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.debug
+
+        }
+    }
+
+    dexOptions {
+        javaMaxHeapSize "3g"
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
+    packagingOptions {
+        doNotStrip "*/*/libdjivideo.so"
+        doNotStrip "*/*/libSDKRelativeJNI.so"
+        doNotStrip "*/*/libFlyForbid.so"
+        doNotStrip "*/*/libduml_vision_bokeh.so"
+        doNotStrip "*/*/libyuv2.so"
+        doNotStrip "*/*/libGroudStation.so"
+        doNotStrip "*/*/libFRCorkscrew.so"
+        doNotStrip "*/*/libUpgradeVerify.so"
+        doNotStrip "*/*/libFR.so"
+        doNotStrip "*/*/libDJIFlySafeCore.so"
+        doNotStrip "*/*/libdjifs_jni.so"
+        doNotStrip "*/*/libsfjni.so"
+        doNotStrip "*/*/libDJICommonJNI.so"
+        doNotStrip "*/*/libDJICSDKCommon.so"
+        doNotStrip "*/*/libDJIUpgradeCore.so"
+        doNotStrip "*/*/libDJIUpgradeJNI.so"
+
+        pickFirst 'lib/*/libstlport_shared.so'
+        pickFirst 'lib/*/libRoadLineRebuildAPI.so'
+        pickFirst 'lib/*/libGNaviUtils.so'
+        pickFirst 'lib/*/libGNaviMapex.so'
+        pickFirst 'lib/*/libGNaviData.so'
+        pickFirst 'lib/*/libGNaviMap.so'
+        pickFirst 'lib/*/libGNaviSearch.so'
+        pickFirst 'lib/*/libDJIFlySafeCore.so'
+        pickFirst 'lib/*/libdjifs_jni.so'
+        pickFirst 'lib/*/libsfjni.so'
+        exclude 'META-INF/proguard/okhttp3.pro'
+        exclude 'META-INF/rxjava.properties'
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    viewBinding {
+        enabled = true
+    }
+
+    dataBinding {
+        enabled = true
+    }
+
+}
+
+//==============================JitPack 上传插件配置 start=====================
+apply plugin: 'com.github.dcendents.android-maven'
+group = 'com.github.zuozhuang0629'
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        //这里我写的时候是这个版本
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
+    }
+}
+//==============================JitPack 上传插件配置 end=======================
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(path: ':lib_common')
+    implementation project(path: ':dji_core')
+
+    implementation 'org.greenrobot:eventbus:3.0.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    implementation 'androidx.annotation:annotation:1.2.0'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    implementation 'androidx.core:core-ktx:1.3.2'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation('com.dji:dji-uxsdk:4.14', {
+        exclude module: 'library-anti-distortion'
+        exclude module: 'fly-safe-database'
+    })
+
+
+    compileOnly('com.dji:dji-sdk-provided:4.14')
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.0'
+    annotationProcessor 'com.alibaba:arouter-compiler:1.2.2'
+
+    // AMAP: Do not include if publishing to Google Play Store
+    implementation 'com.amap.api:3dmap:6.9.2'
+    implementation 'com.amap.api:search:6.9.2'
+    implementation 'com.amap.api:location:4.7.0'
+
+    //glide
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+
+    implementation "com.afollestad.material-dialogs:color:3.3.0"
+
+    //room
+    implementation "androidx.room:room-runtime:2.2.6"
+    implementation "androidx.room:room-ktx:2.2.6"
+    kapt "androidx.room:room-compiler:2.2.6"
+    //指示器
+    implementation 'com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar'
+    //spinner
+    implementation 'com.github.arcadefire:nice-spinner:1.4.4'
+    //recycleview
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.4'
+
+    //WheelPicker
+    implementation 'cn.aigestudio.wheelpicker:WheelPicker:1.1.3'
+    //指示器
+    implementation 'com.github.warkiz.widget:indicatorseekbar:2.1.2'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    //bugly
+    implementation 'com.tencent.bugly:crashreport:3.1.0'
+}

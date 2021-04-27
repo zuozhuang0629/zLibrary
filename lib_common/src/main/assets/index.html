@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>无垠天巡（K-FLY）</title>
+  <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/main.css">
+   <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+  <!-- 顶部区域 -->
+    <!-- 导航菜单 -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">首页</a>
+          <a class="navbar-brand" href="#about">app简介</a>
+          <a class="navbar-brand" href="#zhuyi">app注意事项</a>
+		  <!--<a class="navbar-brand" href="#add">新版本新增内容</a>-->
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">app功能模块<i class="caret"></i></a>
+              <ul class="dropdown-menu">
+                <li><a class="scroll" href="#login">登录</a></li>
+                <li><a class="scroll" href="#qxcaiji">倾斜采集</a></li>
+                <li><a class="scroll" href="#dbxcaiji">多边形采集</a></li>
+                <li><a class="scroll" href="#zdfeixing">指点飞行</a></li>
+                <li><a class="scroll" href="#zykongzhi">自由控制</a></li>
+                <li><a class="scroll" href="#checkPic">图像查看与上传</a></li>
+                <li><a class="scroll" href="#xgfuwu">无垠天巡相关服务</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+  <!-- 免责声明 -->
+    <div class="container" id="mianze" >
+      <div class="jumbotron">
+        <h2>免责声明</h2>
+        <p>感谢您使用无垠天巡（K-FLY）飞行器地面控制APP。请仔细阅读用户手册，严格遵守本手册要求的操作流程及规范，以使您的无垠天巡（K-FLY）APP能正常运行。</p>
+        <p>鉴于无垠智探无法控制用户对飞行器及无垠天巡的具体使用、安装、总装、改装以及其他不当使用等情况，由以上违背本手册所造成的财物损失、人身伤害及社会公共危害，无垠智探将不承担相应的损失及赔偿责任。</p>
+      </div>
+    </div>
+
+  <!-- app简介 -->
+  <div class="container mt" id="about">
+      <div class="jumbotron">
+        <h2>app简介</h2>
+        <p>无垠天巡（K-FLY，以下简称K-FLY）是针对无人机爱好者、行业应用、科研人员的一款航线规划APP，当前版本包含四个主要功能模块，<strong>倾斜采集、多边形采集、指点飞行、自由控制</strong>。</p>
+        <p><strong>倾斜采集</strong>通过优秀的算法实现了<font color="orange"><b>单镜头模拟五镜头的效果，使三维建模效果可以达到行业应用级别。</b></font>用户可以根据目标区域移动、拉伸、旋转矩形范围框体，K-FLY可自动生成模拟五镜头的五条航线（正射、前视、后视、左视、右视），适配无人机即可根据设定航线自动采集数据。全过程无需用户进行其他操作，快捷高效。</p>
+        <p><strong>多边形采集</strong>是针对<font color="orange"><b>无人机单镜头区域航摄与图像拼接后处理相结合</b></font>而开发的模块。在该模块中无人机可任意设置框选区域形状，不似“倾斜采集”模块中受矩形框选区域的限定</p>
+        <p><strong>指点飞行</strong><font color="orange"><b>根据无人机巡逻及探测需要开发，</b></font>支持用户在APP地图上按指定点进行飞行，单次最少支持2航点、最大支持99个航点飞行。</p>
+        <p><strong>自由控制</strong>支持用户<font color="orange"><b>在自由场景下手动操作无人机飞行，</b></font>在飞行过程中支持多种格式的照片及影像。</p>
+      </div>
+    </div>
+
+  <!-- app注意事项 -->
+  <div class="container mt" id="zhuyi">
+      <div class="jumbotron">
+        <h2>APP使用注意事项</h2>
+        <p>1、使用K-FLY进行多边形飞行、指点飞行时请保持无人机GPS模式；当自由控制中，使用姿态模式飞行时请时刻注意无人机飞行状态，谨慎飞行；</p>
+        <p>2、请一定保持飞行过程中手机及遥控器与无人机之间无遮挡（遮挡包括但不限于人体、树林、楼群或山脉等），障碍物遮挡时可能导致APP图传不稳定，甚至瞬间失去连接；</p>
+        <p>3、无人机起飞降落时尽量选择空旷地点，保持手机及遥控器在高处，这样可以最大限度增加图传的传输距离；</p>
+        <p>4、当APP提醒无人机低电量时（一般为电量剩余30%），请及时返航；</p>
+        <p>5、当APP提醒无人机状态异常，指南针异常、视觉定位异常、GPS信号弱等信息时，请高度重视，并建议暂停无人机当前任务，待无人机状态正常时再进行飞行活动；</p>
+        <small>如果您在使用无垠天巡（K-FLY）过程中，遇到无法解决的问题，请通过电话（027- 83861936）及无垠智探官网（<a href="http://www.kfgeo.com">www.kfgeo.com</a>）联系我们的客服人员。如果您有任何宝贵建议，欢迎通过微信公众号“wuyinzhitan”及官方邮箱kuafugeo-003@kfgeo.com 向我们留言。</small>
+      </div>
+    </div>
+	
+	
+
+  <!-- app使用流程 -->
+  <!-- 无人机型号 -->
+  <div class="container mt" id="leixin">
+      <div class="jumbotron">
+        <h2>无人机支持型号</h2>
+       <div class="smallfont">K-Fly基于DJI无人机飞行器及基础飞控开发，目前仅适配DJI产品</div>
+       <ul class="xinghao">
+       	<li>Spark</li>
+       	<li>Mavic air、Mavic Pro</li>
+       	<li>M200、M210</li>
+       	<li>Matrice 100</li>
+       	<li>Phantom 4 Pro、Phantom 4 advance、Phantom 4</li>
+       	<li>Inspire 1、Inspire 1 Pro、Inspire 2</li>
+       	<li>Matrice 600、Matrice 600 Pro</li>
+       </ul>
+       <small>如有其它品牌飞行器希望与K-Fly合作使用，详情请咨询无垠智探技术热线</small>
+      </div>
+    </div>
+
+  <!-- 使用流程介绍 -->
+  <div class="container mt" id="liucheng">
+  	<div class="jumbotron">
+  		<h2>使用流程介绍</h2>
+      <!--1、使用app执行任务前-->
+  		<p><strong>1.使用K-FLY App执行任务前，请确保</strong></p>
+  		<ul>
+        <li>（1）已申请并获取DJI账号</li>
+  			<li>（2）已安装好DJI发布的最新固件</li>
+  			<li>（3）无人机上已经插入一张有足够容量的高速SD卡</li>
+  			<li>（4）App中未提示任何无人机状态异常信息</li>
+  			<li>（5）用户已阅读DJI的操作指南，了解使用的无人机的硬件限制</li>
+  			<li>（6）用户能够熟练使用遥控器控制无人机，启动/终止自动返航，并了解其带来的后果。明确知道空中触发停机指令（左摇杆内八+智能返航）会导致电机停机以致无人机坠落</li>
+  			<li>（7）已经取得飞行区域的飞行许可，并且在不危害他人人身安全、财产安全及不威胁社会公共安全的区域飞行</li>
+  		</ul>
+      <!--2、使用App时-->
+      <p><strong>2.第一次使用K-FLY App时</strong></p>
+      <ul>
+        <li>（1）请确保网络通畅，App须连接DJI的服务器激活。点击右上角用户登录，输入DJI账号并登录</li>
+        <li><img src="images/2.png" alt=""></li>
+        <li><img src="images/3.png" alt=""></li>
+        <li>（2）待完成第一次DJI账号登录后，三个月内无需重新登录，可以离线使用。若第一次打开时没有联网，App会弹出错误提示，以示激活失败。</li>
+      </ul>
+      <!--3、准备工作-->
+      <p><strong>3.准备工作</strong></p>
+      <ul>
+        <li>（1）选择一个较空旷的地点，作为无人机起飞与降落点</li>
+        <li>（2）按照遥控器—APP—无人机的顺序开启（遥控器的开启一定要早于无人机的开启）</li>
+        <li>（3）进入K-FLY App 选择所需的功能模块，倾斜采集、多边形采集、指点飞行、自由控制</li>
+      </ul>
+      <!--4、数据采集-->
+      <p><strong>4.数据采集</strong></p>
+      <p>app包含四个功能模块</p>
+      <img src="images/1.png" alt="">
+      <small><font color="red"><b>提示：</b></font>若APP提示无人机未连接，请耐心等待1—2分钟，若依旧未连接，断开遥控器与手机的连接线，重新连接，并为手机选择K-FLY。当K-FLY功能模块中（倾斜采集、多边形采集、指点飞行）的地图上出现小飞机<img class="p_inner" width="16px" height="12px" src="images/aircraft.png">及蓝色小圆点<img class="p_inner" width="16px" height="16px" src="images/phonelocation.png">（手机位置）时，K-FLY中的功能模块可以正常使用。</small>
+    </div>
+  </div>
+
+  <!--功能模块介绍-->
+  <h2>功能模块介绍</h2>
+
+
+<div class="container mt" id="login">
+      <div class="jumbotron">
+	  <p><strong>1.注册、登录K-CLUB账号</strong></p>
+        <!--<h2>注册、登录K-CLUB账号</h2>-->
+        <p>1、首先请前往“无垠魔方”图像智能处理平台（http://www.kfgeo.com/）注册账号。登录网址，点击"登录"，然后点击”免费注册“，输入用户名,密码，邮箱（需真实有效，找回密码的唯一途径）。</p>
+		<img src="images/register1.png" alt="">
+		<img src="images/register2.png" alt="">
+		
+        <p>2、在注册邮箱中去激活账号后，在APP中登录。如下：</p>
+		<img src="images/login.jpg" alt="">
+       
+        <small>如果您在注册，登录过程中，遇到无法解决的问题，请通过电话（027- 83861936）及无垠智探官网（<a href="http://www.kfgeo.com">www.kfgeo.com</a>）联系我们的客服人员。如果您有任何宝贵建议，欢迎通过微信公众号“wuyinzhitan”及官方邮箱kuafugeo-003@kfgeo.com 向我们留言。</small>
+      </div>
+    </div>
+
+
+
+  <!--1、倾斜采集-->
+  <div class="container mt" id="qxcaiji">
+    <div class="jumbotron">
+      <p><strong>2.倾斜采集</strong></p>
+
+      <!--(1)作业区域确定-->
+      <p><b>（1）作业区域确定</b></p>
+      <ul>
+        <li> 1）点击首界面进入倾斜采集</li>
+        <li> 2）通过获取当前位置功能<img class="p_inner" src="images/locate.png" alt="">定位到当前作业区域（以手机所在点为定位点）</li>
+        <li> 3）手动拖动中心点<img class="p_inner" src="images/point.png" alt="">可以整体移动航线（选定区域及航线）</li>
+        <li> 4）拖动选定区域设置点<img class="p_inner" src="images/point.png" alt="">可以等比例缩放区域大小</li>
+        <li> 5）长按采集区域右侧的<img class="p_inner" src="images/point.png" alt="">可以旋转数据采集区域</li>
+        <li> 6）<img class="p_inner" src="images/startpoint.png" alt="">代表航线起点</li>
+        <li> 7）页面最右侧0,1,2,3,4代表目标区域内无人机将要执行的不同视角五航线</li>
+      </ul>
+      <img src="images/4.png" alt="">
+
+      <!--(2)航线参数设置-->
+      <p><b>（2）航线参数设置</b></p>
+      <ul>
+        <li><b>飞行高度：</b>若使用的是一般消费级无人机，设置值应当为航线经过路线最高点高程+20m;</li>
+        <li><b>航向重叠率：</b>指在同一条航线上，无人机拍摄的照片重叠度;</li>
+        <li><b>旁向重叠率：</b>指平行航线间无人机拍摄的照片重叠度;</li>
+        <li><b>相机倾角：</b>无人机云台角度，建议设置为35-50度之间;</li>
+        <li><b>飞行速度：</b>建议设置值为5m/s（超过此速度自动避障功能将被削弱）.</li>
+      </ul>
+      <img src="images/5.png" alt="">
+      <p><small><b>注意：消费级无人机自带的GPS一般高程误差在±10m，因此在设置飞行高度时要有20m的允许误差，请不要轻易尝试以贴近建筑物的高度飞行！</b></small></p>
+
+
+      <!--(3)相机参数设置-->
+      <p><b>（3）相机参数设置</b></p>
+      <ul>
+        <li><b>照片的宽高比：</b>APP支持的格式包括4:3、16:9、3:2三种;</li>
+        <li><b>跳过已完成部分：</b>大范围场景中，受限于现阶段无人机电池电量限制，单架次并不能完成数据采集工作。为避免用户重复采集数据，APP支持用户选择跳过已完成部分航线，当用户设置好跳过完成部分内容后（例如，跳过已完成部分50%），无人机再次执行任务时，将不会采集“跳过的完成部分”航线（图中橙色部分为“跳过已完成部分”）;</li>
+        <li><b>上传任务：</b>（航线规划完成上传至无人机），开始任务，暂停任务，继续任务，结束任务，开始返航（自动返航）.</li>
+      <img src="images/7.png" alt="">
+
+
+      <!--(4)飞行任务指令设置-->
+      <p><b>（4）飞行任务指令设置</b></p>
+      <ul>
+        <li><b>返航高度：</b>无人机完成任务后，自动返航的飞行高度应高于飞行区域内最高点高程+20m;</li>
+        <li><b>照片格式设置：</b>APP支持的格式有JPEG,RAW。JPEG为普通照片格式，RAW包含较多原始信息，单张照片所需存储空间大，但后期照片可修改性较强.</li>
+      <img src="images/6.png" alt="">
+      <p><small><b>注意：</b></small></p>
+      <ul>
+        <li><small>1.当暂停任务或中途结束任务时，任务后台管理仍会记录该任务中无人机已执行的部分，重新加载任务后，无人机将会从上一次任务中止点开始执行。</small></li>
+        <li><small>2.飞行任务空中暂停，但未按结束任务按钮，则不支持用户再次上传新的任务。新任务上传必须在前一次任务完成或者用户手动结束任务后，才能成功上传新任务并成功执行。</small></li>
+        <li><small>3.卫星影像更新较慢，在一些建设速度较快的区域可能会出现滞后的情况；在一些偏远地区，可能会没有卫星影像。建议飞行前，做好作业区域踏勘工作。</small></li>
+        <li><small>4.  任务完成后的无人机状态一定要选择，选项有返航、悬停、原地降落，建议选择前两项，原地降落可能会降落到不具备无人机降落条件的地点，导致无人机及行人遭遇险情。</small></li>
+        <li><small>5.当遇到APP提醒风速过大、强烈电磁干扰信号弱、图传失联等情况请及时暂停任务并结束任务，然后返航。</small></li>
+      </ul>
+
+      <!--(5)加载任务子菜单-->
+      <p><b>（5）任务加载</b></p>
+      <div role="tabpanel" class="tab-pane fade active in" id="category_01">
+        <div class="row">
+          <div class="row">
+            <div class="col-xs-12 col-lg-4">
+              <img src="images/8.png" alt="">
+            </div>
+            <div class="col-xs-12 col-lg-4">
+              <img src="images/9.png" alt="">
+            </div>
+                    <div class="col-xs-12 col-lg-4">
+                      <img src="images/10.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+
+
+
+<!--2、多边形采集-->
+  <div class="container mt" id="dbxcaiji">
+    <div class="jumbotron">
+      <p><strong>3.多边形采集</strong></p>
+
+
+      <!--(1)作业区域确定-->
+      <p><b>（1）作业区域确定</b></p>
+      <ul>
+        <li> 1）点击首界面进入多边形采集</li>
+        <li> 2）通过获取当前位置功能<img class="p_inner" src="images/locate.png" alt="">定位到当前作业区域（以手机所在点为定位点）,默认地图为街道图，点击<img class="p_inner" src="images/change.png" alt="">可更改为卫星地图。</li>
+        <li> 3）手动拖动中心点<img class="p_inner" src="images/point.png" alt="">可以整体移动航线（选定区域及航线）。</li>
+        <li> 4）拖动选定区域设置点<img class="p_inner" src="images/point.png" alt="">可任意改变起形状，同时航线也会随之自适应改变。</li>
+        <li> 5）长按采集区域右侧的<img class="p_inner" src="images/point.png" alt="">可以旋转数据采集区域。</li>
+        <li> 6）点击<img class="p_inner" src="images/plus.png" alt="">可以添加区域设置点，最终通过此类的操作确定作业区域</li>
+      <img src="images/11.jpg" alt="">
+
+      <p><b>（2）飞行参数设置</b></p>
+      <p>飞行高度、航向重叠率、旁向重叠率、相机倾角、飞行速度与倾斜采集模块中一致。</p>
+
+      <p><b>（3）相机参数设置</b></p>
+      <p>照片的宽高比、照片格式设置与倾斜采集模块中一致。</p>
+
+      <p><b>（4）飞行任务指令设置</b></p>
+      <p>返航高度、跳过已完成部分、任务完成后无人机状态设置与倾斜采集模块中一致。</p>
+      <p>上传任务（航线规划完成上传至无人机）、开始任务、暂停任务、继续任务、结束任务、开始返航（自动返航）与倾斜采集模块中一致。</p>
+
+
+      <p><b>（5）加载任务子菜单</b></p>
+      <p>保存任务、加载任务与倾斜采集模块中一致。</p>
+
+      <p><small><b>注意：</b>多边形采集航线的生成是以相机倾角为90（即正射）为固定值生成，若调整无人机相机倾角，亦可采集照片，但图像真实覆盖范围可能会与框选区域存在合理偏差。</small></p>
+
+    </div>
+  </div>
+
+
+  <!--3、指点飞行-->
+  <div class="container mt" id="zdfeixing">
+    <div class="jumbotron">
+      <p><strong>4.指点飞行</strong></p>
+      <span>指点飞行支持用户在地图上确定航点和按照航点顺序（按照用户添加顺序排列）进行飞行</span>
+
+      <!--(1)作业区域确定-->
+      <p><b>（1）添加航点</b></p>
+      <ul>
+        <li> App上通过“添加航点”按钮添加第一个航点，之后按设想的顺序在地图上添加航点即可，点击航点弹出对话框可选择删除当前航点，长按则可以移动航点到新位置；“重置”按钮会清除所有已设置航点。</li>
+      </ul>
+      <img src="images/12.png" alt="">
+
+      <p><b>（2）飞行参数设置</b></p>
+      <p>应设置内容包括航线执行任务（无、照片、视频）、飞行高度、飞行速度（建议5m/s）。</p>
+      <img src="images/13.png" alt="">
+
+      <p><b>（3）相机参数设置</b></p>
+      <p>若是飞行任务是照片，则相应选择照片格式JPEG或RAW。任务为视频和无时，相机参数不支持自定义，视频格式为在<b>自由控制模块</b>中设置的格式。</p>
+      <img src="images/14.png" alt="">
+
+      <p><b>（4）飞行任务指令设置</b></p>
+      <p>除剔除“跳过已完成部分”功能外，同多边形采集</p>
+      <img src="images/15.png" alt="">
+
+      <p><small><b>注意：</b></small></p>
+      <ul>
+        <li><small>1.单次任务最少支持2航点，最多支持99航点。由于无人机图传限制，理论上支持最远距离7km（最远航点与起飞点的距离），但实际飞行条件较为苛刻，建议不超过5km。</small></li>
+        <li><small>2.任务完成后，用户使用指令使得无人机悬停，并在原任务基础上新添加了航点，再次上传，无人机将会执行新上传的航点，之前执行过的航点将不会重复执行。保存任务功能支持保存后添加的航点航线，但不会存储整条航点航线（新添加航点+已执行航点航线）。</small></li>
+      </ul>
+
+    </div>
+  </div>
+
+
+  <!--4、自由控制-->
+  <div class="container mt" id="zykongzhi">
+    <div class="jumbotron">
+      <p><strong>5.自由控制</strong></p>
+       <p>自由控制支持用户使用遥控器手动自由控制无人机</p>
+        <p><img class="ziyou" src="images/takeoff.png" alt="">一键起飞，用户无需手动启动飞起无人机。一键起飞将使无人机升高到2—3m处</p>
+        <p><img class="ziyou" src="images/gohome.png" alt="">一键返航，无人机飞行中，按一键返航，无人机将会返回任务设定好的返航点（注意：一般无人机起飞点即是返航点）</p>
+        <p> <b>重点参数解释：</b></p>
+        <ul>
+          <li><b>image ratio</b>：照片宽高比；</li>
+          <li><b>image format</b>：照片格式；</li>
+          <li><b>white balance</b>：白平衡；</li>
+          <li><b>video size</b>：视频大小设置，最大支持4096*2160，最小是1280*720</li>
+          <li><b>video format</b>：视频格式，支持MOV 和MP4；</li>
+          <li><b>ISO</b>: 感光度，对于非专业人员建议设置auto模式（自动模式）；</li>
+          <li><b>aperture</b>:光圈大小；</li>
+          <li><b>shutter</b>：快门速度；</li>
+        </ul>
+        image ratio：照片宽高比；image format：照片格式；white balance：白平衡；video size：视频大小设置，最大支持4096*2160，最小是1280*720 Video format：视频格式，支持MOV 和MP4;ISO: 感光度，对于非专业人员建议设置auto模式（自动模式）；aperture:光圈大小；shutter：快门速度；
+        <div role="tabpanel" class="tab-pane fade active in" id="category_01">
+          <div class="row">
+            <div class="col-xs-6 col-lg-3">
+              <img src="images/ziyou1.png" alt="">
+            </div>
+            <div class="col-xs-6 col-lg-3">
+              <img src="images/ziyou2.png" alt="">
+            </div>
+            <div class="col-xs-6 col-lg-3">
+              <img src="images/ziyou3.png" alt="">
+            </div>
+            <div class="col-xs-6 col-lg-3">
+              <img src="images/ziyou4.png" alt="">
+            </div>
+          </div>
+        </div>
+        <p>自由控制界面</p>
+        <img src="images/16.png" alt="">
+
+    </div>
+  </div>
+
+
+<div class="container mt" id="checkPic">
+      <div class="jumbotron">
+	  <p><strong>6.图像查看与上传</strong></p>
+        <p>1、使用此功能先请在APP中登录K-CLUB平台账号。</p>
+		<img src="images/login.jpg" alt="">
+		
+        <p>2、图像查看的入口在倾斜采集，多边形飞行及指点飞行界面都有，如下</p>
+		<img src="images/checkpic.jpg" alt="">
+       
+	   <p>3、图像查看图片查看界面，可以看到飞行器SD卡内的图像，每个图像上两个按钮，删除和下载，删除是将此图像从SD卡中删除，下载是将图像保存报手机，保存位置为/storage/.../KFly。左上角是打开侧面可以按顺序批量下载图片（每次十张），也可以一键清空SD卡内的照片。上传按钮是将下载的图片上传到K-CLUB平台，可以在K—CLUB中查看</p>
+		<img src="images/checkpic2.jpg" alt="">
+		
+	   
+        <small>如果您在注册，登录过程中，遇到无法解决的问题，请通过电话（027- 83861936）及无垠智探官网（<a href="http://www.kfgeo.com">www.kfgeo.com</a>）联系我们的客服人员。如果您有任何宝贵建议，欢迎通过微信公众号“wuyinzhitan”及官方邮箱kuafugeo-003@kfgeo.com 向我们留言。</small>
+      </div>
+    </div>
+
+
+
+
+
+  <!--5、无垠天巡相关服务-->
+  <div class="container mt" id="xgfuwu">
+    <div class="jumbotron">
+      <p><strong>7.无垠天巡相关服务</strong></p>
+       <!--<p>用户可以通过无垠天巡的官方网站<a href="http://www.kfgeo.com">www.kfgeo.com</a> （目前新版官网正在紧急建设中,若有需求请拨打热线027-83861936）三维云建模版块、图像云拼接版块，按照官网数据上传指南，上传您用K-FLY采集的倾斜采集的五航线照片、多边形采集的单航线照片。无垠天巡运营团队将根据您的任务需求、照片数量及要求模型精度，预估处理时间及处理费用。</p>
+
+       <!--(1)三维云建模-->
+     <!-- <p><b>（1）三维云建模</b></p>
+      <ul>
+        <li> 对于用户采集的100张照片（少于等于100张且单张最大分辨率不超过5472×3648），无垠天巡运营团队将提供免费的真三维建模服务。三维模型支持在无垠天巡官网免费在线浏览（公开形式），付费下载。</li>
+        <li>无垠天巡运营团队提供三种精度（低、高、超高）的建模服务，当照片数量超过100张，用户需付费完成建模服务，生成的真三维模型为私有不公开，支持在线私有浏览，本地下载</li>
+        <li><b>低精度建模服务，超过100张照片的部分，0.65元/张</b></li>
+        <li><b>高精度建模服务，超过100张照片的部分，0.95元/张</b></li>
+        <li><b>超高精度建模服务，超过100张照片的部分，1.35元/张</b></li>
+      </ul>
+	  
+      <div role="tabpanel" class="tab-pane fade active in" id="category_01">
+        <div class="row">
+          <div class="row">
+            <div class="col-xs-12 col-lg-4">
+              <img src="images/17.png" alt="">
+            </div>
+            <div class="col-xs-12 col-lg-4">
+              <img src="images/18.png" alt="">
+            </div>
+                    <div class="col-xs-12 col-lg-4">
+                      <img src="images/19.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>-->
+		
+		<p><b>（1）图像拼接</b></p>
+		 <p>图像拼接：某一目标航拍采集的多张正射原始图像进行拼接，生成整张高清、垂直的正射区域成果图像。也可制作三维模型、地形图等测绘成果。</p>
+		<img src="images/pj.jpg" alt="">
+		<p><b>（2）定位量测</b></p>
+		 <p>
+		  单点式定位支持倾斜原始图像地图展现，可根据航线轨迹与航拍点生成图像，通过点击地图上的航点可显示缩略图与原始图像。 </p>
+		 <p>图像量测指在无垠魔方图像智能处理平台地图展现界面提供量测、标注工具包，目前可对距离、面积进行量测和标注，还可根据客户需求开发定制工具包。百度、腾讯、高德等多种地图资源均可接入。</p>
+		<img src="images/dwlc.jpg" alt="">
+		
+    </div>
+  </div>
+
+  <!--5、无垠天巡相关服务-->
+  <div class="container mt" id="gongneng">
+    <div class="jumbotron">
+      <h2>版权声明</h2>
+      <p><b>K-FLY用户手册所有文字内容、图片，版权均属湖北无垠智探科技发展有限公司所有，未经湖北无垠智探科技发展有限公司书面授权，任何企业、网站、个人不得转载手册内容，违者本公司将保留依法处理的权利。</b></p>
+    </div>
+  </div>
+
+
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

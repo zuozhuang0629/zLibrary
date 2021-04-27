@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--图片带文字-->
+    <declare-styleable name="lib_common_ImageTextView">
+        <attr name="lib_common_image_src" format="reference" />
+        <attr name="lib_common_text" format="string" />
+        <attr name="lib_common_textSize" format="integer" />
+        <attr name="lib_common_text_color" format="color" />
+    </declare-styleable>
+
+    <!-- 仿 ios 开关按钮 -->
+    <declare-styleable name="lib_common_SwitchButton">
+        <!-- 是否选中 -->
+        <attr name="android:checked" />
+        <!-- 是否禁用 -->
+        <attr name="android:enabled" />
+    </declare-styleable>
+
+    <!-- main toolbar-->
+    <declare-styleable name="lib_common_MainToolbar">
+        <!--background -->
+        <attr name="lib_common_background_src" format="reference" />
+        <!--title-->
+        <attr name="lib_common_title" format="string" />
+        <!--left image-->
+        <attr name="lib_common_image_left" format="reference" />
+        <!--right image-->
+        <attr name="lib_common_image_right" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="lib_common_RangeSeekBar">
+        <attr name="lib_common_seek_max" format="integer" />
+        <attr name="lib_common_seek_min" format="integer" />
+        <attr name="lib_common_seek_progress" format="integer" />
+        <attr name="lib_common_seek_tag" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="lib_common_RoundAngleImageView">
+        <attr name="lib_common_corner_radius" format="dimension" />
+        <attr name="lib_common_select_src" format="reference" />
+        <attr name="lib_common_none_src" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="lib_common_DetectionView">
+        <attr name="lib_common_detection_info" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="lib_common_ThreadSwitchView">
+        <attr name="lib_common_left_text" format="string" />
+        <attr name="lib_common_center_text" format="string" />
+        <attr name="lib_common_right_text" format="string" />
+        <attr name="lib_common_def_select" format="integer" />
+    </declare-styleable>
+
+</resources>

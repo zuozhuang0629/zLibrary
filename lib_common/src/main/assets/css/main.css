@@ -1,0 +1,60 @@
+*{
+	margin:0;
+	padding: 0;
+}
+ul {
+	list-style: none;
+}
+
+/**.jumbotron {
+	margin-bottom: 10px;
+}**/
+.jumbotron p {
+	font-size: 16px;
+	margin-bottom: 10px;
+}
+.navbar-default .navbar-nav > .active > a {
+	background-color:#f8f8f8;
+}
+.mt h2{
+	margin-top: 0px;
+}
+h2 {
+	text-align: center;
+	margin-bottom:10px;
+}
+img {
+	margin-bottom: 20px;
+}
+.smallfont {
+	font-size: 12px;
+	text-align:center;
+}
+.xinghao {
+	font-size: 16px;
+}
+.hezuo {
+	font-size: 12px;
+}
+span {
+	color: red;
+}
+img {
+	width: 100%;
+	height: 100%;
+	margin-top: 10px;
+}
+img.ziyou {
+	vertical-align:middle;
+	width: 40px;
+	height: 40px;
+}
+b {
+	line-height: 30px;
+}
+
+.p_inner{
+	width: 16px;
+	height: 16px;
+}
+

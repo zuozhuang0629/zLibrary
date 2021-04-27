@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="light_gray">#B3FFFFFF</color>
+     <color name="medium_blue">#298080</color>
+
+    <color name="colorPrimary">#9FCA3D</color>
+    <color name="colorPrimaryDark">#9FCA3D</color>
+    <color name="colorAccent">#9FCA3D</color>
+
+    <color name="backgroundeee">#eeeeee</color>
+
+    <color name="splashTextOneColor">#999999</color>
+    <color name="splashTextTwoColor">#666666</color>
+    <color name="sub_head_background">#000000</color>
+    <color name="set_text_color">#9FCA3D</color>
+    <color name="transparent">#00FFFFFF</color>
+    <color name="progress_background">#E2EACE</color>
+    <color name="theme_green">#9FCA3D</color>
+    <color name="polygon_inner">#8C000000</color>
+    <color name="polygon_stroke">#019F55</color>
+    <color name="orange">#FD8F1E</color>
+    <color name="black">#000000</color>
+
+    <color name="black_overlay">#000000</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="white">#FFFFFF</color>
+
+
+    <color name="background_blue">#242d34</color>
+    <color name="dark_gray">#80000000</color>
+    <color name="gray">#ff5e5e5e</color>
+    <color name="dialog_background">#B09C27B0</color>
+    <color name="btn_default_Color">#666666</color>
+
+    <color name="table">#9C8E8E</color>
+
+    <color name="color_B5B3AE">#B5B3AE</color>
+    <color name="splashBackground">#B5B3AE</color>
+    <color name="color_333333">#333333</color>
+    <color name="color_666666">#666666</color>
+</resources>

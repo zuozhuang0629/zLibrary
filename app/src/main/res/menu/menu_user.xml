@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/it_order"
+            android:icon="@drawable/ic_icon_calendar"
+            android:title="我的订单" />
+
+        <item
+            android:id="@+id/it_result"
+            android:icon="@drawable/ic_icon_calendar"
+            android:title="我的成果" />
+
+        <item
+            android:id="@+id/it_panoramic"
+            android:icon="@drawable/ic_icon_calendar"
+            android:title="我的全景" />
+
+        <item
+            android:id="@+id/it_setting"
+            android:icon="@drawable/ic_icon_calendar"
+            android:title="我的设置" />
+
+        <item
+            android:id="@+id/log_setting"
+            android:icon="@drawable/ic_icon_calendar"
+            android:title="日志同步" />
+
+    </group>
+
+
+</menu>

@@ -1,0 +1,8 @@
+<resources>
+    <declare-styleable name="lib_common_LoadView">
+        <attr name="lib_common_progress_color" format="color" />
+        <attr name="lib_common_progress_width" format="dimension" />
+        <attr name="lib_common_load_success_color" format="color" />
+        <attr name="lib_common_load_failure_color" format="color" />
+    </declare-styleable>
+</resources>

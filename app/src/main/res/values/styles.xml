@@ -1,0 +1,33 @@
+<resources>
+
+    <style name="appTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:textColor">@color/color_333333</item>
+    </style>
+    <!--隐藏tabbar-->
+    <style name="windowFullscreenTheme" parent="appTheme">
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="appTheme.launcher" parent="windowFullscreenTheme">
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="dialog_default_animate">
+        <item name="android:windowEnterAnimation">
+            @anim/dialog_vertical_translate_enter
+        </item>
+        <item name="android:windowExitAnimation">
+            @anim/dialog_vertical_translate_dialog_out
+        </item>
+    </style>
+
+    <style name="planning_setting">
+        <item name="android:windowEnterAnimation">@anim/planning_anim_planning_dialog_enter</item>
+        <item name="android:windowExitAnimation">@anim/planning_anim_planning_dialog_out</item>
+    </style>
+</resources>

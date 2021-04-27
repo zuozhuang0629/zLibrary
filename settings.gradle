@@ -1,0 +1,3 @@
+include ':dji_core'
+include ':app',
+        ':lib_common'

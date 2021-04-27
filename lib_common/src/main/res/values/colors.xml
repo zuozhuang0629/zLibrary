@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="lib_common_colorPrimary">#3F51B5</color>
+    <color name="lib_common_colorPrimaryDark">#303F9F</color>
+    <color name="lib_common_colorAccent">#FF4081</color>
+
+    <color name="lib_common_splashBackground">#333333</color>
+    <color name="lib_common_splashTextOneColor">#999999</color>
+    <color name="lib_common_splashTextTwoColor">#666666</color>
+    <color name="lib_common_sub_head_background">#000000</color>
+    <color name="lib_common_set_text_color">#9FCA3D</color>
+    <color name="lib_common_transparent">#00FFFFFF</color>
+    <color name="lib_common_progress_background">#E2EACE</color>
+    <color name="lib_common_theme_green">#9FCA3D</color>
+    <color name="lib_common_polygon_inner">#8C000000</color>
+    <color name="lib_common_polygon_stroke">#019F55</color>
+    <color name="lib_common_orange">#FD8F1E</color>
+    <color name="lib_common_black">#000000</color>
+
+    <color name="lib_common_black_overlay">#000000</color>
+    <color name="lib_common_colorWhite">#FFFFFF</color>
+    <color name="lib_common_white">#FFFFFF</color>
+    <color name="lib_common_background_blue">#242d34</color>
+    <color name="lib_common_dark_gray">#80000000</color>
+    <color name="lib_common_gray">#ff5e5e5e</color>
+    <color name="lib_common_dialog_background">#B09C27B0</color>
+    <color name="lib_common_btn_default_Color">#666666</color>
+
+    <color name="lib_common_table">#9C8E8E</color>
+</resources>

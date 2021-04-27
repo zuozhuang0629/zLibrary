@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="8dp">
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="模式"
+        app:layout_constraintBottom_toBottomOf="@+id/planning_model"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.aigestudio.wheelpicker.WheelPicker
+        android:id="@+id/planning_model"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/planning_3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textView8"
+        app:layout_constraintTop_toTopOf="parent"
+        app:wheel_curved="true"
+        app:wheel_indicator_color="@color/colorPrimary"
+        app:wheel_item_text_size="12sp"
+        app:wheel_selected_item_text_color="@color/colorPrimary"
+        app:wheel_visible_item_count="2" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="飞行高度"
+        app:layout_constraintBottom_toBottomOf="@+id/planning_3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/planning_3" />
+
+    <com.aigestudio.wheelpicker.WheelPicker
+        android:id="@+id/planning_3"
+        android:layout_width="50dp"
+        android:layout_height="0dp"
+
+        app:layout_constraintBottom_toTopOf="@+id/planning_task_speed"
+        app:layout_constraintEnd_toStartOf="@+id/planning_2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@+id/textView9"
+        app:layout_constraintTop_toBottomOf="@+id/planning_model"
+        app:wheel_curved="true"
+        app:wheel_indicator_color="@color/colorPrimary"
+        app:wheel_item_align="right"
+        app:wheel_item_text_size="12sp"
+        app:wheel_selected_item_text_color="@color/colorPrimary"
+        app:wheel_visible_item_count="2" />
+
+    <com.aigestudio.wheelpicker.WheelPicker
+        android:id="@+id/planning_2"
+        android:layout_width="50dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/planning_3"
+        app:layout_constraintEnd_toStartOf="@+id/planning_1"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/planning_3"
+        app:layout_constraintTop_toTopOf="@+id/planning_3"
+        app:wheel_curved="true"
+        app:wheel_indicator_color="@color/colorPrimary"
+        app:wheel_item_align="center"
+        app:wheel_item_text_size="12sp"
+        app:wheel_selected_item_text_color="@color/colorPrimary"
+        app:wheel_visible_item_count="2" />
+
+    <com.aigestudio.wheelpicker.WheelPicker
+        android:id="@+id/planning_1"
+        android:layout_width="50dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/planning_3"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/planning_2"
+        app:layout_constraintTop_toTopOf="@+id/planning_3"
+        app:wheel_curved="true"
+        app:wheel_indicator_color="@color/colorPrimary"
+        app:wheel_item_align="left"
+        app:wheel_item_text_size="12sp"
+        app:wheel_selected_item_text_color="@color/colorPrimary"
+        app:wheel_visible_item_count="2" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="任务速度"
+        app:layout_constraintBottom_toBottomOf="@+id/planning_task_speed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/planning_task_speed" />
+
+
+    <com.aigestudio.wheelpicker.WheelPicker
+        android:id="@+id/planning_task_speed"
+        android:layout_width="50dp"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/planning_take_off_speed2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/planning_task_speed2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@+id/textView10"
+        app:layout_constraintTop_toBottomOf="@+id/planning_3"
+        app:wheel_curved="true"
+        app:wheel_indicator_color="@color/colorPrimary"
+        app:wheel_item_text_size="12sp"
+        app:wheel_selected_item_text_color="@color/colorPrimary"
+        app:wheel_visible_item_count="2" />
+
+    <com.aigestudio.wheelpicker.WheelPicker
+        android:id="@+id/planning_task_speed2"
+        android:layout_width="50dp"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        app:layout_constraintBottom_toBottomOf="@+id/planning_task_speed"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/planning_task_speed"
+        app:layout_constraintTop_toTopOf="@+id/planning_task_speed"
+        app:wheel_curved="true"
+        app:wheel_indicator_color="@color/colorPrimary"
+        app:wheel_item_text_size="12sp"
+        app:wheel_selected_item_text_color="@color/colorPrimary"
+        app:wheel_visible_item_count="2" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="起飞速度"
+        app:layout_constraintBottom_toBottomOf="@+id/planning_take_off_speed2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/planning_task_speed" />
+
+    <com.aigestudio.wheelpicker.WheelPicker
+        android:id="@+id/planning_take_off_speed2"
+        android:layout_width="50dp"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/planning_horizontal_seek"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/planning_take_off_speed1"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@+id/textView11"
+        app:layout_constraintTop_toBottomOf="@+id/planning_task_speed"
+        app:wheel_curved="true"
+        app:wheel_indicator_color="@color/colorPrimary"
+        app:wheel_item_text_size="12sp"
+        app:wheel_selected_item_text_color="@color/colorPrimary"
+        app:wheel_visible_item_count="2" />
+
+    <com.aigestudio.wheelpicker.WheelPicker
+        android:id="@+id/planning_take_off_speed1"
+        android:layout_width="50dp"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        app:layout_constraintBottom_toBottomOf="@+id/planning_take_off_speed2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/planning_take_off_speed2"
+        app:layout_constraintTop_toTopOf="@+id/planning_take_off_speed2"
+        app:wheel_curved="true"
+        app:wheel_indicator_color="@color/colorPrimary"
+        app:wheel_item_text_size="12sp"
+        app:wheel_selected_item_text_color="@color/colorPrimary"
+        app:wheel_visible_item_count="2" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="旁向重叠率"
+
+        app:layout_constraintBottom_toBottomOf="@+id/planning_horizontal_seek"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/planning_horizontal_seek" />
+
+    <com.warkiz.widget.IndicatorSeekBar
+        android:id="@+id/planning_horizontal_seek"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        app:isb_indicator_color="@color/colorPrimary"
+        app:isb_indicator_text_color="@color/white"
+        app:isb_indicator_text_size="18sp"
+        app:isb_max="95"
+        app:isb_min="50"
+        app:isb_only_thumb_draggable="false"
+        app:isb_progress="85"
+        app:isb_seek_smoothly="true"
+        app:isb_show_indicator="rounded_rectangle"
+        app:isb_show_tick_marks_type="oval"
+        app:isb_show_tick_texts="true"
+
+        app:isb_thumb_color="@color/colorPrimary"
+        app:isb_thumb_size="20dp"
+        app:isb_tick_marks_size="13dp"
+
+        app:isb_tick_texts_color="@color/black"
+        app:isb_tick_texts_size="15sp"
+        app:isb_track_background_size="2dp"
+        app:isb_track_progress_color="@color/colorPrimary"
+        app:isb_track_progress_size="4dp"
+        app:layout_constraintBottom_toTopOf="@+id/planning_vertical_seek"
+        app:layout_constraintEnd_toEndOf="@+id/planning_horizontal_tv"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textView12"
+        app:layout_constraintTop_toBottomOf="@+id/planning_take_off_speed2" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="航线重叠率"
+        app:layout_constraintBottom_toBottomOf="@+id/planning_vertical_seek"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/planning_vertical_seek" />
+
+    <TextView
+        android:id="@+id/planning_vertical_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="85%"
+        app:layout_constraintBottom_toBottomOf="@+id/planning_vertical_seek"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/planning_vertical_seek" />
+
+    <TextView
+        android:id="@+id/planning_horizontal_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="85%"
+        app:layout_constraintBottom_toBottomOf="@+id/planning_horizontal_seek"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/planning_horizontal_seek" />
+
+    <com.warkiz.widget.IndicatorSeekBar
+        android:id="@+id/planning_vertical_seek"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        app:isb_indicator_color="@color/colorPrimary"
+        app:isb_indicator_text_color="@color/white"
+        app:isb_indicator_text_size="18sp"
+        app:isb_max="95"
+        app:isb_min="50"
+        app:isb_only_thumb_draggable="false"
+        app:isb_progress="85"
+        app:isb_seek_smoothly="true"
+        app:isb_show_indicator="rounded_rectangle"
+        app:isb_show_tick_marks_type="oval"
+        app:isb_show_tick_texts="true"
+
+        app:isb_thumb_color="@color/colorPrimary"
+        app:isb_thumb_size="20dp"
+        app:isb_tick_marks_size="13dp"
+
+        app:isb_tick_texts_color="@color/black"
+        app:isb_tick_texts_size="15sp"
+        app:isb_track_background_size="2dp"
+        app:isb_track_progress_color="@color/colorPrimary"
+        app:isb_track_progress_size="4dp"
+        app:layout_constraintBottom_toTopOf="@+id/planning_complete_seek"
+        app:layout_constraintEnd_toEndOf="@+id/planning_vertical_tv"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textView14"
+        app:layout_constraintTop_toBottomOf="@+id/planning_horizontal_seek" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="完成进度"
+        app:layout_constraintBottom_toBottomOf="@+id/planning_complete_seek"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/planning_complete_seek" />
+
+    <com.warkiz.widget.IndicatorSeekBar
+        android:id="@+id/planning_complete_seek"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        app:isb_indicator_color="@color/colorPrimary"
+        app:isb_indicator_text_color="@color/white"
+        app:isb_indicator_text_size="18sp"
+        app:isb_max="80"
+        app:isb_min="0"
+        app:isb_only_thumb_draggable="false"
+        app:isb_progress="0"
+        app:isb_seek_smoothly="true"
+        app:isb_show_indicator="rounded_rectangle"
+        app:isb_show_tick_marks_type="oval"
+
+        app:isb_show_tick_texts="true"
+        app:isb_thumb_color="@color/colorPrimary"
+        app:isb_thumb_size="20dp"
+
+        app:isb_tick_marks_size="13dp"
+        app:isb_tick_texts_color="@color/black"
+        app:isb_tick_texts_size="15sp"
+        app:isb_track_background_size="2dp"
+        app:isb_track_progress_color="@color/colorPrimary"
+        app:isb_track_progress_size="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textView14"
+        app:layout_constraintTop_toBottomOf="@+id/planning_vertical_seek" />
+
+    <TextView
+        android:id="@+id/planning_complete_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0%"
+        app:layout_constraintBottom_toBottomOf="@+id/planning_complete_seek"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/planning_complete_seek" />
+
+    <View
+        android:id="@+id/divider6"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintBottom_toTopOf="@+id/planning_3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/divider7"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="@+id/planning_3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/divider8"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="@+id/planning_task_speed"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/divider9"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintBottom_toTopOf="@+id/planning_horizontal_seek"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

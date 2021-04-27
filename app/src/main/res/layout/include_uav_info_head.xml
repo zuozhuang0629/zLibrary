@@ -1,0 +1,88 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/sub_head"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_gray"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/planning_iv_home"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_weight="0.7"
+        android:contentDescription="home"
+        android:scaleType="center"
+        custom:srcCompat="@drawable/icon_home" />
+
+    <View
+        android:id="@+id/planning_view2"
+        android:layout_width="1dp"
+        android:layout_height="wrap_content"
+        android:background="@color/white" />
+
+    <dji.ux.widget.PreFlightStatusWidget
+        android:id="@+id/planning_dji_flight_status"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:layout_weight="2" />
+
+    <dji.ux.widget.FlightModeWidget
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:layout_weight="1" />
+
+    <dji.ux.widget.GPSSignalWidget
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:layout_gravity="center"
+        android:layout_weight="0.5" />
+
+    <dji.ux.widget.RemoteControlSignalWidget
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:layout_weight="0.5" />
+
+    <dji.ux.widget.VideoSignalWidget
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:layout_weight="0.5" />
+
+    <dji.ux.widget.BatteryWidget
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_weight="0.5"
+        custom:excludeView="doubleVoltage|singleVoltage">
+
+    </dji.ux.widget.BatteryWidget>
+
+    <View
+        android:id="@+id/planning_view3"
+        android:layout_width="1dp"
+        android:layout_height="wrap_content"
+        android:background="@color/white" />
+
+    <LinearLayout
+        android:id="@+id/planning_sub_head_tool"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:layout_marginEnd="15dp"
+        android:layout_weight="0.7"
+        android:gravity="center|center_vertical"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/planning_iv_function_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:scaleType="center"
+            custom:srcCompat="@drawable/icon_list" />
+
+    </LinearLayout>
+
+</LinearLayout>

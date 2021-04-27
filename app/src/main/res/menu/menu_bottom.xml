@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_uav"
+        android:checked="true"
+        android:icon="@drawable/icon_tab_uav"
+        android:title="@string/menu_auv" />
+
+    <item
+        android:id="@+id/menu_task_management"
+        android:checked="true"
+        android:icon="@drawable/icon_task_management"
+        android:title="@string/menu_task_management" />
+
+    <item
+        android:id="@+id/menu_me"
+        android:icon="@drawable/icon_tab_me"
+        android:title="@string/menu_me" />
+</menu>

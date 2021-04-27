@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base application theme. -->
+    <style name="lib_common_AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/lib_common_colorPrimary</item>
+        <item name="colorPrimaryDark">@color/lib_common_colorPrimaryDark</item>
+        <item name="colorAccent">@color/lib_common_theme_green</item>
+    </style>
+    <!--隐藏tabbar-->
+    <style name="lib_common_windowFullscreenTheme" parent="lib_common_AppTheme">
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="lib_common_AppTheme.launcher" parent="lib_common_windowFullscreenTheme">
+        <item name="windowNoTitle">true</item>
+    </style>
+
+
+    <!--    旧版本样式-->
+    <!--弹出框的seekbar按钮-->
+    <style name="lib_common_task_set_seekbar">
+        <item name="android:paddingStart">5dp</item>
+        <item name="android:paddingEnd">5dp</item>
+        <item name="android:maxHeight">3dp</item>
+        <item name="android:minHeight">3dp</item>
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:indeterminateDrawable">@color/lib_common_theme_green</item>
+        <item name="android:progressDrawable">@drawable/lib_common_seekbar</item>
+        <item name="android:thumb">@drawable/lib_common_progress_thump</item>
+    </style>
+
+
+    <style name="lib_common_animate_default_dialog">
+        <item name="android:windowEnterAnimation">
+            @anim/lib_common_anim_vertical_translate_dialog_enter
+        </item>
+        <item name="android:windowExitAnimation">
+            @anim/lib_common_anim_vertical_translate_dialog_out
+        </item>
+    </style>
+
+
+</resources>

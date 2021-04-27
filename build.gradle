@@ -1,0 +1,47 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+
+    ext {
+        kotlin_version = '1.4.31'
+    }
+    repositories {
+        maven {
+            url 'http://172.16.1.73:8081/nexus/repository/kfgeo-public/'
+            credentials {
+                username 'dev.kfgeo'
+                password 'Kfgeo123'
+            }
+        }
+        maven { url 'https://dl.bintray.com/kotlin/kotlin-eap' }
+        mavenCentral()
+        google()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:4.0.1'
+        classpath 'com.jakewharton:butterknife-gradle-plugin:10.2.0'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        mavenCentral()
+        mavenLocal()
+        maven {
+            url 'http://172.16.1.73:8081/nexus/repository/kfgeo-public/'
+            credentials {
+                username 'dev.kfgeo'
+                password 'Kfgeo123'
+            }
+        }
+        google()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
